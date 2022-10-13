@@ -1,7 +1,7 @@
 import re
 from collections.abc import Sequence, MutableSequence
 
-r = re.compile("^[A-Za-z0-9-()_']*$")
+r = re.compile("^[A-Za-z0-9А-Яа-я-()_':;+{}\\[\\]*\">=^$#!@~`/\\\\§№.]*$")
 
 
 def validator(cmp, exc):
@@ -19,6 +19,8 @@ def validator(cmp, exc):
 def is_safe_string(s: str) -> bool:
     """Checks if string consist of letters, numbers, underscores, dashes and apostrophes"""
     if not isinstance(s, str):
+        return False
+    if len(s) == 0:
         return False
     return r.fullmatch(s) is not None
 

@@ -3,9 +3,9 @@ from unittest import TestCase
 from rule34_posts_wrapper.posts_wrapper import PostsWrapper
 from tests import posts_wrapper
 
-bad_queries = [["awshnhbf*sdgn_er="], [""]]
+bad_queries = [[""]]
 
-good_queries = [["asd", "dsa"], ["skyrim"], ["123_321'-"]]
+good_queries = [["asd", "dsa"], ["sk^yr@im"], ["123_321'-"]]
 
 
 class TestPostsWrapper(TestCase):
