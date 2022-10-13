@@ -24,7 +24,7 @@ setup(
     author_email="nukdokpelx@outlook.com",
     description="Library for retrieving posts and tags from rule34.paheal.net",
     long_description_content_type="text/markdown",
-    long_description="README.md",
+    long_description=open("README.md", "r").read(),
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Topic :: Multimedia",
