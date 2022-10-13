@@ -12,14 +12,18 @@ if not post_query:
 if not tag_query:
     tag_query = input("Enter tag query: ")
 
-post_query = post_query.split(' ')
+post_query = post_query.split(" ")
 
 if not is_list_of_safe_strings(post_query):
-    raise ValueError("post query should be a list of strings, each of which should consist of letters, numbers, "
-                     "dashes, underscores and apostrophes")
+    raise ValueError(
+        "post query should be a list of strings, each of which should consist of letters, numbers, "
+        "dashes, underscores and apostrophes"
+    )
 
 if not is_safe_string(tag_query):
-    raise ValueError("tag query must consist of letters, numbers, dashes, underscores and apostrophe")
+    raise ValueError(
+        "tag query must consist of letters, numbers, dashes, underscores and apostrophe"
+    )
 
 posts_wrapper = PostsWrapper(post_query)
 tags_wrapper = TagsWrapper(tag_query)

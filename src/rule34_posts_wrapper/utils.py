@@ -3,6 +3,7 @@ from collections.abc import Sequence, MutableSequence
 
 r = re.compile("^[A-Za-z0-9-()_']*$")
 
+
 def validator(cmp, exc):
     def decorator(setter):  # a decorator for the setter
         def wrapper(self, value):  # the wrapper around your setter
@@ -16,14 +17,14 @@ def validator(cmp, exc):
 
 
 def is_safe_string(s: str) -> bool:
-    """ Checks if string consist of letters, numbers, underscores, dashes and apostrophes"""
+    """Checks if string consist of letters, numbers, underscores, dashes and apostrophes"""
     if not isinstance(s, str):
         return False
     return r.fullmatch(s) is not None
 
 
 def is_list_of_safe_strings(s: Sequence[str] | MutableSequence[str]) -> bool:
-    """ Checks if each element of the string list consists of letters, numbers, underscores, dashes and apostrophes"""
+    """Checks if each element of the string list consists of letters, numbers, underscores, dashes and apostrophes"""
     if not isinstance(s, Sequence) or not isinstance(s, MutableSequence):
         return False
     for string in s:
@@ -33,7 +34,7 @@ def is_list_of_safe_strings(s: Sequence[str] | MutableSequence[str]) -> bool:
 
 
 def check_duplicate_column(s: list[object], attr: str) -> bool:
-    """ Checks if there are items with matching attributes in the list of objects. """
+    """Checks if there are items with matching attributes in the list of objects."""
     # TODO Optimize
     column = []
     for obj in s:
