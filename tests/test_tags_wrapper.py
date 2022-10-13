@@ -1,7 +1,7 @@
 from unittest import TestCase
 
 from rule34_posts_wrapper.tags_wrapper import TagsWrapper
-from tests import tags_wrapper
+from __init__ import tags_wrapper
 
 bad_queries = ["", " ", ",asd", ","]
 
@@ -20,7 +20,7 @@ class TestTagsWrapper(TestCase):
     def test_bad_query(self):
         """Tests Tags Wrapper's bad query validation."""
         for bad_query in bad_queries:
-            with self.assertRaises(ValueError) as cm:
+            with self.assertRaises(ValueError):
                 TagsWrapper(bad_query)
 
     def test_good_queries(self):
