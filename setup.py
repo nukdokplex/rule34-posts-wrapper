@@ -23,6 +23,8 @@ setup(
     author="NukDokPlex",
     author_email="nukdokpelx@outlook.com",
     description="Library for retrieving posts and tags from rule34.paheal.net",
+    long_description_content_type="text/markdown",
+    long_description="README.md",
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Topic :: Multimedia",
