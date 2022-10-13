@@ -1,7 +1,7 @@
 from unittest import TestCase
 
 from rule34_posts_wrapper.tags_wrapper import TagsWrapper
-from __init__ import tags_wrapper
+from tests import tags_wrapper
 
 bad_queries = ["", " ", ",asd", ","]
 
