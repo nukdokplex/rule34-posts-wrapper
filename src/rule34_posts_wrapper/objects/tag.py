@@ -35,11 +35,7 @@ class Tag:
         return self._count
 
     @count.setter
-    @validator(
-        lambda count: count is not int or count < 0,
-        ValueError("Count must be a positive integer"),
-    )
-    def count(self, value):
+    def count(self, value: int):
         """Count setter."""
         self._count = value
 
@@ -50,5 +46,7 @@ class Tag:
         t = json.loads(json_str)
         if len(t) == 0:
             return tags
-        [tags.append(tag) for tag in t]
+
+        for tag in t:
+            tags.append(Tag(tag, t[tag]))
         return tags
