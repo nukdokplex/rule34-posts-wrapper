@@ -1,7 +1,7 @@
 import re
 from collections.abc import Sequence, MutableSequence
 
-r = re.compile("^[A-Za-z0-9А-Яа-я-()_':;+{}\\[\\]*\">=^$#!@~`/\\\\§№.]*$")
+r = re.compile("[, ]")
 
 
 def validator(cmp, exc):
@@ -22,7 +22,9 @@ def is_safe_string(s: str) -> bool:
         return False
     if len(s) == 0:
         return False
-    return r.fullmatch(s) is not None
+    if r.match(s) is None:
+        return True
+    return False
 
 
 def is_list_of_safe_strings(s: Sequence[str] | MutableSequence[str]) -> bool:

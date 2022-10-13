@@ -3,7 +3,7 @@ from unittest import TestCase
 from rule34_posts_wrapper import PostsWrapper
 from __init__ import posts_wrapper
 
-bad_queries = [[""]]
+bad_queries = [[" ", ",", "asd,asd f"]]
 
 good_queries = [["asd", "dsa"], ["sk^yr@im"], ["123_321'-"]]
 
