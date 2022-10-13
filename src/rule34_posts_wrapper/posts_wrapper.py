@@ -73,7 +73,7 @@ class PostsWrapper(Sequence):
 
         If page is already present in loaded pages it will do nothing unless parameter force is true.
         """
-        if page in self._loaded_pages.keys() and force:
+        if page not in self._loaded_pages.keys() or force:
             self._loaded_pages[page] = self._get_page(page)
 
     def load_all_pages(self, force: bool = False) -> None:
@@ -137,6 +137,7 @@ class PostsWrapper(Sequence):
             raise IndexError
         page = PostsWrapper._get_post_page_number(index)
         self.load_page(page)
+        post_index = PostsWrapper._get_post_index_in_page(index)
         return self._loaded_pages[page][PostsWrapper._get_post_index_in_page(index)]
 
     def index(self, value: Post, start: int = None, stop: int = None) -> int:
