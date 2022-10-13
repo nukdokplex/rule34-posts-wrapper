@@ -64,5 +64,5 @@ substring.
 
 To run all tests, just use this command:
 ```shell
-tox
+tox -e py
 ```
