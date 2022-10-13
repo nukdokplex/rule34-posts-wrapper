@@ -4,8 +4,8 @@ from typing import Iterator
 import bs4
 import urllib3
 
-from rule34_posts_wrapper.objects.post import Post
-from rule34_posts_wrapper.utils import validator, is_list_of_safe_strings
+from .post import Post
+from ..utils import validator, is_list_of_safe_strings
 
 
 class Page(Sequence[Post]):

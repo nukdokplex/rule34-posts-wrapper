@@ -7,8 +7,8 @@ import requests
 from requests import Response
 from urllib3.util import Url
 
-from rule34_posts_wrapper.objects.tag import Tag
-from rule34_posts_wrapper.utils import is_safe_string
+from .objects import Tag
+from .utils import is_safe_string
 
 
 class TagsWrapper(Sequence):

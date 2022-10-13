@@ -5,11 +5,11 @@ from typing import Iterator
 
 from requests import Response
 
-from rule34_posts_wrapper.objects.page import Page
-from rule34_posts_wrapper.objects.post import Post
+from .objects import Page
+from .objects import Post
 import requests
 
-from rule34_posts_wrapper.utils import is_safe_string, is_list_of_safe_strings
+from .utils import is_list_of_safe_strings
 
 PER_PAGE = 70
 

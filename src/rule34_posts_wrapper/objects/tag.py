@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import json
 
-from rule34_posts_wrapper.utils import validator, is_safe_string
+from ..utils import validator, is_safe_string
 
 
 class Tag:

@@ -1,7 +1,7 @@
 from typing import List
 from urllib3.util import Url
 
-from rule34_posts_wrapper.utils import validator, is_list_of_safe_strings
+from ..utils import validator, is_list_of_safe_strings
 
 
 class Post:
