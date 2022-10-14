@@ -28,4 +28,5 @@ jobs:
           python setup.py sdist bdist_wheel
       - name: Publish to PyPI
         run: |
-          twine upload dist/*
+          printenv TWINE_USERNAME
+          twine upload --verbose dist/*
