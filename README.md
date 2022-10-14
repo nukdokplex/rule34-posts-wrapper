@@ -25,7 +25,7 @@ pre-commit install
 
 To start import ``PostsWrapper`` and call it:
 ```python
-from rule34_posts_wrapper.posts_wrapper import PostsWrapper
+from rule34_posts_wrapper import PostsWrapper
 
 posts = PostsWrapper(['your', 'query', 'here'])[0].file
 ```
@@ -51,7 +51,7 @@ Note that all URLs are ``urllib3.util.Url``, call ``str(posts[x].link)`` to conv
 Like ``PostsWrapper``, ``TagsWrapper`` provides you iterable list of ``Tag``'s:
 
 ```python
-from rule34_posts_wrapper.tags_wrapper import TagsWrapper
+from rule34_posts_wrapper import TagsWrapper
 
 tags = TagsWrapper("Your_Query_Here")
 
