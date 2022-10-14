@@ -23,4 +23,4 @@ jobs:
           python setup.py sdist bdist_wheel
       - name: Publish to PyPI
         run: |
-          twine upload --repository ${{ secrets.TWINE_REPOSITORY }} -u ${{ secrets.PYPI_USERNAME }} -p ${{ secrets.PYPI_PASSWORD }} dist/*
+          twine upload -u ${{ secrets.PYPI_USERNAME }} -p ${{ secrets.PYPI_PASSWORD }} dist/*
