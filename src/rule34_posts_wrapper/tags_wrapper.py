@@ -14,11 +14,12 @@ from .utils import is_safe_string
 class TagsWrapper(Sequence):
     """A wrapper for rule34.paheal.net tag autocomplete."""
 
-    def __init__(self, query: str):
+    def __init__(self, query: str, proxy: dict = None):
         if not is_safe_string(query):
             raise ValueError(
                 "Query must consist of letters, numbers, dashes, underscores and apostrophes"
             )
+        self._proxy = proxy
         self._cookies = {"ui-tnc-agreed": "true"}
         self._headers = {
             "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) "
@@ -45,6 +46,7 @@ class TagsWrapper(Sequence):
             str(TagsWrapper.generate_autocomplete_url(self._query)),
             cookies=self._cookies,
             headers=self._headers,
+            proxies=self._proxy,
         )
         self._cookies = r.cookies
         return r
