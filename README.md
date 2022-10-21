@@ -1,8 +1,9 @@
 # Rule34 posts wrapper
-![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/nukdokplex/rule34-posts-wrapper/CI%20for%20rule34-posts-wrapper/master?label=tests)
-![Codecov](https://img.shields.io/codecov/c/gh/nukdokplex/rule34-posts-wrapper?token=FZ6UNF6GE1&label=tests%20coverage)
-![GitHub Repo stars](https://img.shields.io/github/stars/nukdokplex/rule34-posts-wrapper)
+[![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/nukdokplex/rule34-posts-wrapper/CI%20for%20rule34-posts-wrapper/master?label=tests)](https://github.com/nukdokplex/rule34-posts-wrapper/actions/workflows/ci.yml)
+[![Codecov](https://img.shields.io/codecov/c/gh/nukdokplex/rule34-posts-wrapper?token=FZ6UNF6GE1&label=tests%20coverage)](https://app.codecov.io/gh/nukdokplex/rule34-posts-wrapper)
+[![GitHub Repo stars](https://img.shields.io/github/stars/nukdokplex/rule34-posts-wrapper)](https://github.com/nukdokplex/rule34-posts-wrapper)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![PyPI - Downloads](https://img.shields.io/pypi/dm/Rule34-Posts-Wrapper?label=PyPI%20d-loads%3A)](https://pypi.org/project/Rule34-Posts-Wrapper/)
 
 This is a [rule34.paheal.net](https://rule34.paheal.net) wrapper that turns your query into an iterable list of posts
 with the most important information about them.
