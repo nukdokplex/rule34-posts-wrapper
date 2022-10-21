@@ -17,9 +17,10 @@ PER_PAGE = 70
 class PostsWrapper(Sequence):
     """A wrapper for Rule34 posts"""
 
-    def __init__(self, query: list[str]):
+    def __init__(self, query: list[str], proxy: dict = None):
         """Creates instance of Posts Wrapper."""
         self._query = query
+        self._proxy = proxy
         if not is_list_of_safe_strings(self._query):
             raise ValueError(
                 "Tags must be a list of strings consist of letters, numbers, dashes, underscores and "
@@ -58,6 +59,7 @@ class PostsWrapper(Sequence):
                 PostsWrapper.get_page_url(self._query, page),
                 cookies=self._cookies,
                 headers=self._headers,
+                proxies=self._proxy,
             )
         except requests.exceptions.RequestException as err:
             raise err
