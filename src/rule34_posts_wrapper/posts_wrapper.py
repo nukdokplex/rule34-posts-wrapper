@@ -137,7 +137,6 @@ class PostsWrapper(Sequence):
             raise IndexError
         page = PostsWrapper._get_post_page_number(index)
         self.load_page(page)
-        post_index = PostsWrapper._get_post_index_in_page(index)
         return self._loaded_pages[page][PostsWrapper._get_post_index_in_page(index)]
 
     def index(self, value: Post, start: int = None, stop: int = None) -> int:
