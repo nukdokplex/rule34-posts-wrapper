@@ -20,12 +20,18 @@ class PostsWrapper(Sequence):
     def __init__(self, query: list[str], proxy: dict = None):
         """Creates instance of Posts Wrapper."""
         self._query = query
-        self._proxy = proxy
+
         if not is_list_of_safe_strings(self._query):
             raise ValueError(
                 "Tags must be a list of strings consist of letters, numbers, dashes, underscores and "
                 "apostrophes"
             )
+        if len(query) > 3:
+            raise ValueError(
+                "Query can't have more than 3 tags due to rule34.paheal.net restrictions"
+            )
+
+        self._proxy = proxy
         self._loaded_pages = dict()
         self._cookies = {"ui-tnc-agreed": "true"}
         self._headers = {
