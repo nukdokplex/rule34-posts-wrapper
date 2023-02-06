@@ -1,4 +1,4 @@
-name: CD for rule34-posts-wrapper
+name: Continous Deployment
 
 on:
   push:

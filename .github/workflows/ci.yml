@@ -1,4 +1,4 @@
-name: CI for rule34-posts-wrapper
+name: Continuos Integration
 
 on:
   push:
