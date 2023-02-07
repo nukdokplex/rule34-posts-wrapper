@@ -5,6 +5,8 @@
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![PyPI - Downloads](https://img.shields.io/pypi/dm/Rule34-Posts-Wrapper?label=PyPI%20d-loads%3A)](https://pypi.org/project/Rule34-Posts-Wrapper/)
 
+![Rule34 Posts Wrapper](https://github.com/nukdokplex/rule34-posts-wrapper/raw/master/cover.png)
+
 This is a [rule34.paheal.net](https://rule34.paheal.net) wrapper that turns your query into an iterable list of posts
 with the most important information about them.
 
