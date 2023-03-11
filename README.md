@@ -10,6 +10,10 @@
 This is a [rule34.paheal.net](https://rule34.paheal.net) wrapper that turns your query into an iterable list of posts
 with the most important information about them.
 
+Consider supporting this project. You can buy me a cup of tea (I don't drink coffee).
+- Bitcoin: [bc1qmr5m0z4p0gzqnfrztamrrpmgkw79725dsqdp03](bitcoin:BC1QMR5M0Z4P0GZQNFRZTAMRRPMGKW79725DSQDP03)
+- Ethereum: 0xb0627eBDb226b4D972661637091573596c5B3B7a
+
 ## Installation
 
 To install:
