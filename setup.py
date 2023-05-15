@@ -11,7 +11,7 @@ version_info = {}
 with open(version_file, "r") as f:
     exec(f.read(), version_info)
 
-dev_requirements = ["coverage", "pytest", "pytest-cov", "pre-commit", "coverage", "tox"]
+dev_requirements = ["coverage", "pytest", "pytest-cov", "tox"]
 
 setup(
     name=version_info["__title__"],
